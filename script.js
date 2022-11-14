@@ -17,12 +17,10 @@ slider.oninput = function(){
  
 function generatePassword(){
 
-alert("gerando senha")
-
     let pass = "";
 
     for(let i = 0, n = charset.length; i < sliderElement.value; ++i){
-        pass += charset.charAt(Math,floor(Math.random() * n));
+        pass += charset.charAt(Math.floor(Math.random() * n));
     }
 
     containerPassword.classList.remove("hide");
@@ -30,5 +28,6 @@ alert("gerando senha")
 }
 
 function copyPassword(){
-    alert("senha copiada com sucesso")
+    alert("senha copiada")
+    navigator.clipboard.writeText(novaSenha);
 }
